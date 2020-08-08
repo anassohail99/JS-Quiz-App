@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b262c
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  font-size: 50px !important;
+  color: #fff;
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: #0f4c75;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  /* border: 1px solid hsl(var(--hue), 100%, 30%); */
+  border: none;
+  background-color: #1b262c;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: #fff;
+  background-color: green
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+  color: #fff;
+  background-color: red
+}
+
+.start-btn,
+.next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+h4 {
+  color: #2187ca;
+  position: absolute;
+  bottom: 0
+}
+
+span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700
+}
